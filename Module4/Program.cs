@@ -10,8 +10,9 @@ namespace Module4
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Please enter your color");
             var color = Console.ReadLine();
-
+            
             switch (color)
             {
                 case "red":
@@ -28,13 +29,20 @@ namespace Module4
 
                     Console.WriteLine("Your color is green");
                     break;
-
-                default:
-
+                case "cyan":
                     Console.BackgroundColor = ConsoleColor.Cyan;
                     Console.ForegroundColor = ConsoleColor.Black;
 
-                    Console.WriteLine("Your color is cyan!");
+                    Console.WriteLine("Your color is cyan");
+                    break;
+
+
+                default:
+
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Red;
+
+                    Console.WriteLine("Your color is Yellow!");
                     break;
             }
         }
